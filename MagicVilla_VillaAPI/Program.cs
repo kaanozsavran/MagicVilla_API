@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers(option =>       // 
 {                                               //
-    option.ReturnHttpNotAcceptable = true;       // use option.ReturnHttpNotAcceptable = true; 406status code    
+    //option.ReturnHttpNotAcceptable = true;       // use option.ReturnHttpNotAcceptable = true; 406status code    
 }).AddNewtonsoftJson().AddXmlDataContractSerializerFormatters(); // use AddXmlDataContractSerializerFormatters for XML
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
