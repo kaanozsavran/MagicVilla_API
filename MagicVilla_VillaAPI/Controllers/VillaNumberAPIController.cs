@@ -143,23 +143,22 @@ namespace MagicVilla_VillaAPI.Controllers
 
 
 
-        [HttpPut("{id:int}",Name = "UpdateVillaNumber")] // put method for update all features
+        [HttpPut("{id:int}", Name = "UpdateVillaNumber")] // put method for update all features
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<APIResponse>> UpdateVillaNumber(int id, [FromBody] VillaNumberUpdateDTO updateDTO)
         {
-            try { 
-            if(updateDTO == null || id!= updateDTO.VillaNo)
+            try
             {
-                return BadRequest();
-            }
-
+                if (updateDTO == null || id != updateDTO.VillaNo)
+                {
+                    return BadRequest();
+                }
                 VillaNumber model = _mapper.Map<VillaNumber>(updateDTO);
-
-            await _dbVillaNumber.UpdateAsync(model);
-            _response.StatusCode = HttpStatusCode.NoContent;
-            _response.IsSuccess = true;
-            return Ok(_response);
+                await _dbVillaNumber.UpdateAsync(model);
+                _response.StatusCode = HttpStatusCode.NoContent;
+                _response.IsSuccess = true;
+                return Ok(_response);
             }
             catch (Exception ex)
             {
@@ -168,10 +167,9 @@ namespace MagicVilla_VillaAPI.Controllers
                     = new List<string>() { ex.ToString() };
                 return _response;
             }
+
+
+
         }
-
-        
-
-
     }
 }
