@@ -17,7 +17,7 @@ namespace MagicVilla_Web.Controllers
         private readonly IVillaService _villaService;
         private readonly IMapper _mapper;
 
-        public VillaNumberController (IVillaNumberService villaNumberService, IMapper mapper, IVillaService villaService)
+        public VillaNumberController(IVillaNumberService villaNumberService, IMapper mapper, IVillaService villaService)
         {
             _villaNumberService = villaNumberService;
             _mapper = mapper;
@@ -42,11 +42,11 @@ namespace MagicVilla_Web.Controllers
             if (response != null && response.IsSuccess)
             {
                 villaNumberVM.VillaList = JsonConvert.DeserializeObject<List<VillaDTO>>
-                    (Convert.ToString(response.Result)).Select(i=> new SelectListItem
+                    (Convert.ToString(response.Result)).Select(i => new SelectListItem
                     {
                         Text = i.Name,
                         Value = i.Id.ToString()
-                    }); 
+                    });
 
             }
             return View(villaNumberVM);
@@ -64,22 +64,30 @@ namespace MagicVilla_Web.Controllers
                 {
                     return RedirectToAction(nameof(IndexVillaNumber));
                 }
-            }
-
-            var resp = await _villaService.GetAllAsync<APIResponse>();
-            if (resp != null && resp.IsSuccess)
-            {
-                model.VillaList = JsonConvert.DeserializeObject<List<VillaDTO>>
-                    (Convert.ToString(resp.Result)).Select(i => new SelectListItem
+                else
+                {
+                    if (response.ErrorMessages.Count > 0)
                     {
-                        Text = i.Name,
-                        Value = i.Id.ToString()
-                    });
+                        ModelState.AddModelError("ErrorMessages", response.ErrorMessages.FirstOrDefault());
+                    }
+                }
+
+                var resp = await _villaService.GetAllAsync<APIResponse>();
+                if (resp != null && resp.IsSuccess)
+                {
+                    model.VillaList = JsonConvert.DeserializeObject<List<VillaDTO>>
+                        (Convert.ToString(resp.Result)).Select(i => new SelectListItem
+                        {
+                            Text = i.Name,
+                            Value = i.Id.ToString()
+                        });
+
+                }
+                
 
             }
             return View(model);
-            
-        }
+        } 
 
         //public async Task<IActionResult> UpdateVilla(int villaId)
         //{
