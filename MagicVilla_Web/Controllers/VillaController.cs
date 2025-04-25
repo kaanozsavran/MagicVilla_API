@@ -83,6 +83,7 @@ namespace MagicVilla_Web.Controllers
             TempData["error"] = "Error encountered.";
             return View(model);
         }
+        
 
         public async Task<IActionResult> DeleteVilla(int villaId)
         {
