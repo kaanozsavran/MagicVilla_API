@@ -31,6 +31,8 @@ namespace MagicVilla_VillaAPI.Controllers
 
         [HttpGet] //For get method
         [Authorize]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<APIResponse>> GetVillas()
         {
@@ -52,6 +54,8 @@ namespace MagicVilla_VillaAPI.Controllers
 
         [Authorize(Roles = "admin")]
         [HttpGet("{id:int}", Name = "GetVilla")] // you can use like just id
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status200OK)] //status code for 200
         [ProducesResponseType(StatusCodes.Status400BadRequest)] //status code for 400
         [ProducesResponseType(StatusCodes.Status404NotFound)] //status code for 404
@@ -123,6 +127,8 @@ namespace MagicVilla_VillaAPI.Controllers
 
         [HttpDelete("{id:int}", Name = "DeleteVilla")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Authorize(Roles = "CUSTOM")]
