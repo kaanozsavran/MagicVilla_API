@@ -30,7 +30,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
 
         [HttpGet] //For get method
-        [Authorize]
+        [Authorize] // for authorize, you need to add  authorize the other service
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status200OK)]
