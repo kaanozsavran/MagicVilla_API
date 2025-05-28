@@ -30,7 +30,6 @@ namespace MagicVilla_VillaAPI.Controllers
 
 
         [HttpGet] //For get method
-        [Authorize] // for authorize, you need to add  authorize the other service
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -52,7 +51,6 @@ namespace MagicVilla_VillaAPI.Controllers
             }
         }
 
-        [Authorize(Roles = "admin")]
         [HttpGet("{id:int}", Name = "GetVilla")] // you can use like just id
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -91,6 +89,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
         //Post
         [HttpPost] // for get method
+        [Authorize(Roles = "admin")]
         [ProducesResponseType(StatusCodes.Status201Created)] //status code for 201
         [ProducesResponseType(StatusCodes.Status400BadRequest)] //status code for 400
         [ProducesResponseType(StatusCodes.Status500InternalServerError)] //status code for 500
@@ -131,7 +130,7 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = "CUSTOM")]
+        [Authorize(Roles = "admin")]
         public async Task<ActionResult<APIResponse>> DeleteVilla(int id)
         {
             if (id == 0)
@@ -153,7 +152,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
 
 
-
+        [Authorize(Roles = "admin")]
         [HttpPut("{id:int}",Name ="UpdateVilla")] // put method for update all features
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
