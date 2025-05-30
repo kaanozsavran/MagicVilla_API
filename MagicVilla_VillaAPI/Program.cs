@@ -27,7 +27,7 @@ builder.Services.AddApiVersioning(options =>
     options.AssumeDefaultVersionWhenUnspecified = true;
     options.DefaultApiVersion = new ApiVersion(1, 0);
 });
-builder.Services.AddVersionedApiExplorer(options =>
+builder.Services.AddVersionedApiExplorer(options => //for package that apiexplorer.
 {
     options.GroupNameFormat = "'v'VVV";
 });

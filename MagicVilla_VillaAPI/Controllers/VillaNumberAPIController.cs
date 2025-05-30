@@ -14,7 +14,7 @@ namespace MagicVilla_VillaAPI.Controllers
 {
     [Route("api/v{version:apiVersion}VillaNumberAPI")] // For route
     [ApiController]
-    [ApiVersion("1.0")]
+    [ApiVersion("1.0")]   //version vor api version
     [ApiVersion("2.0")]
     public class VillaNumberAPIController : ControllerBase
     {
