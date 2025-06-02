@@ -21,7 +21,7 @@ public Task<T> LoginAsync<T>(LoginRequestDTO obj)
             {
                 ApiType = SD.ApiType.POST,
                 Data = obj,
-                Url = villaUrl + "/api/userAuth/login"
+                Url = villaUrl + "/api/v1/userAuth/login"
             });
         }
 
@@ -31,7 +31,7 @@ public Task<T> LoginAsync<T>(LoginRequestDTO obj)
             {
                 ApiType = SD.ApiType.POST,
                 Data = obj,
-                Url = villaUrl + "/api/userAuth/register"
+                Url = villaUrl + "/api/v1/userAuth/register"
             });
         }
     }
