@@ -31,6 +31,7 @@ namespace MagicVilla_VillaAPI.Controllers.v1
 
 
         [HttpGet] //For get method
+        [ResponseCache(Duration =30)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -58,8 +59,8 @@ namespace MagicVilla_VillaAPI.Controllers.v1
         [ProducesResponseType(StatusCodes.Status200OK)] //status code for 200
         [ProducesResponseType(StatusCodes.Status400BadRequest)] //status code for 400
         [ProducesResponseType(StatusCodes.Status404NotFound)] //status code for 404
-                                                              //[ProducesResponseType(200, Type=typeof(VillaDTO))]    you can use this code instead of the under code for VillaDTO
-
+        //[ProducesResponseType(200, Type=typeof(VillaDTO))]    you can use this code instead of the under code for VillaDTO
+        //[ResponseCache(Location =ResponseCacheLocation.None,NoStore = true)]
         public async Task<ActionResult<APIResponse>> GetVilla(int id)
         {
             try
