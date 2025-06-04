@@ -12,7 +12,7 @@ using System.Net;
 
 namespace MagicVilla_VillaAPI.Controllers.v1
 {
-    [Route("api/v{version:apiVersion}VillaNumberAPI")] // For route
+    [Route("api/v{version:apiVersion}/VillaNumberAPI")] // For route
     [ApiController]
     [ApiVersion("1.0")]   //version vor api version
 
