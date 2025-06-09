@@ -1,6 +1,8 @@
-# Magic Villa API Project
+🏡 Magic Villa API & Web Application
+Magic Villa, modern bir villa yönetim sistemi geliştirmek amacıyla hazırlanmış tam kapsamlı bir web uygulamasıdır. Proje; güçlü, güvenli ve ölçeklenebilir bir RESTful API ile kullanıcı dostu bir web arayüzünü bir araya getirir. Uygulama, .NET 8.0 altyapısı ile inşa edilmiştir.
 
-Magic Villa, villa yönetimi için geliştirilmiş modern bir web uygulamasıdır. Bu proje, .NET 8.0 kullanılarak geliştirilmiş bir RESTful API ve web arayüzünden oluşmaktadır.
+📚 Bu proje, DotNetMastery tarafından sağlanan eğitim serisi takip edilerek başarıyla tamamlanmıştır.
+👉 Eğitimi incelemek istersen: https://www.udemy.com/course/restful-api-with-asp-dot-net-core-web-api/learn/lecture/33346038?start=0#overview
 
 ## 🚀 Teknolojiler
 
