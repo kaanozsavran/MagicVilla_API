@@ -3,7 +3,7 @@
 **Magic Villa**, modern bir villa yönetim sistemi geliştirmek amacıyla hazırlanmış tam kapsamlı bir web uygulamasıdır. Proje; güçlü, güvenli ve ölçeklenebilir bir **RESTful API** ile kullanıcı dostu bir **web arayüzünü** bir araya getirir. Uygulama, .NET 8.0 altyapısı ile inşa edilmiştir.
 
 📚 Bu proje, **DotNetMastery** tarafından sağlanan eğitim serisi takip edilerek başarıyla tamamlanmıştır.  
-👉 Eğitimi incelemek istersen: [DotNetMastery Udemy Eğitimi]([https://www.youtube.com/@DotNetMastery](https://www.udemy.com/course/restful-api-with-asp-dot-net-core-web-api/learn/lecture/33346038?start=0#overview))
+👉 Eğitimi incelemek istersen: [DotNetMastery Udemy Eğitimi](https://www.udemy.com/course/restful-api-with-asp-dot-net-core-web-api/learn/lecture/33346038?start=0#overview)
 
 ---
 
