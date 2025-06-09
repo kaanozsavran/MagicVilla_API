@@ -66,6 +66,3 @@ MagicVilla_Utility/
 - Role-based yetkilendirme
 - API versiyonlama
 - HTTPS zorunluluğu
-
-```
-
