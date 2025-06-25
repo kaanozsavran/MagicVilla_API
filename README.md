@@ -79,7 +79,7 @@ MagicVilla_Utility/
   
 
 
-## Projeden Örnek Ekran Görüntüleri
-```
+---
+#### Proje İçinden Örnek Görüntüler:
 
 ![Image](https://github.com/user-attachments/assets/ebb57cf0-c738-4c9e-be5d-6ac91541bbf0)
