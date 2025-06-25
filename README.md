@@ -83,3 +83,4 @@ MagicVilla_Utility/
 #### Proje İçinden Örnek Görüntüler:
 
 ![Image](https://github.com/user-attachments/assets/ebb57cf0-c738-4c9e-be5d-6ac91541bbf0)
+![Image](https://github.com/user-attachments/assets/aa1e6023-0201-4402-85f5-b3aa7a5d6f53)
