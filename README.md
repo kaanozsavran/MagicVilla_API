@@ -77,7 +77,9 @@ MagicVilla_Utility/
 - API versiyonlama
 - HTTPS zorunluluğu
   
-```
-  
+
+
 ## Projeden Örnek Ekran Görüntüleri
+```
+
 ![Image](https://github.com/user-attachments/assets/ebb57cf0-c738-4c9e-be5d-6ac91541bbf0)
