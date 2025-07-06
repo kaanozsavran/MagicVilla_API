@@ -1,5 +1,12 @@
 # 🏡 Magic Villa API & Web Application
 
+#### Proje İçinden Örnek Görüntüler:
+
+![Image](https://github.com/user-attachments/assets/ebb57cf0-c738-4c9e-be5d-6ac91541bbf0)
+![Image](https://github.com/user-attachments/assets/aa1e6023-0201-4402-85f5-b3aa7a5d6f53)
+
+
+
 **Magic Villa**, modern bir villa yönetim sistemi geliştirmek amacıyla hazırlanmış tam kapsamlı bir web uygulamasıdır. Proje; güçlü, güvenli ve ölçeklenebilir bir **RESTful API** ile kullanıcı dostu bir **web arayüzünü** bir araya getirir. Uygulama, .NET 8.0 altyapısı ile inşa edilmiştir.
 
 📚 Bu proje, **DotNetMastery** tarafından sağlanan eğitim serisi takip edilerek başarıyla tamamlanmıştır.  
@@ -47,28 +54,10 @@
 
 ---
 
-## 🏗️ Proje Yapısı
 
-```
-MagicVilla_VillaAPI/
-├── Controllers/         # API Controllers
-├── Data/               # Database Context
-├── Models/             # Domain Models
-├── Repository/         # Repository Pattern Implementation
-├── DTOs/               # Data Transfer Objects
-└── Program.cs         # Application Configuration
 
-MagicVilla_Web/
-├── Controllers/        # MVC Controllers
-├── Models/            # View Models
-├── Views/             # Razor Views
-├── Service/           # API Service Layer
-└── wwwroot/           # Static Files
 
-MagicVilla_Utility/
-├── DTOs/              # Shared DTOs
-└── Models/            # Shared Models
-```
+
 
 ## 🔐 API Güvenliği
 
@@ -79,8 +68,4 @@ MagicVilla_Utility/
   
 
 
----
-#### Proje İçinden Örnek Görüntüler:
 
-![Image](https://github.com/user-attachments/assets/ebb57cf0-c738-4c9e-be5d-6ac91541bbf0)
-![Image](https://github.com/user-attachments/assets/aa1e6023-0201-4402-85f5-b3aa7a5d6f53)
